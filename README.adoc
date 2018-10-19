@@ -89,5 +89,5 @@ Patches are typically merged into master-next and then are merged into master af
 $: repo init -u https://github.com/Freescale/fsl-community-bsp-platform -b master-next
 
 ---
-Contact support: support@karo-electronics.de
+Contact support: support@karo-electronics.de  
 http://www.karo-electronics.de[Ka-Ro electronics GmbH]
