@@ -74,7 +74,6 @@ $: git send-email --to <insert-maintainer-here>@karo-electronics.de <generated p
 
 == Using Development and Testing Branches
 
-Contact support: support@karo-electronics.de
 Replace the `repo init` command above with one of the following:
 
 master:: For developers
@@ -90,4 +89,5 @@ Patches are typically merged into master-next and then are merged into master af
 $: repo init -u https://github.com/Freescale/fsl-community-bsp-platform -b master-next
 
 ---
+Contact support: support@karo-electronics.de
 http://www.karo-electronics.de[Ka-Ro electronics GmbH]
