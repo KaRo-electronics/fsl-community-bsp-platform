@@ -1,4 +1,4 @@
-= FSL Community BSP
+= Ka-Ro flavoured FSL Community BSP
 
 To get the BSP you need to have `repo` installed and use it as:
 
@@ -15,7 +15,7 @@ Download the BSP source:
 $: PATH=${PATH}:~/bin
 $: mkdir fsl-community-bsp
 $: cd fsl-community-bsp
-$: repo init -u https://github.com/Freescale/fsl-community-bsp-platform -b rocko
+$: repo init -u https://github.com/karo-electronics/fsl-community-bsp-platform -b rocko-karo
 $: repo sync
 
 At the end of the commands you have every metadata you need to start work with.
@@ -30,15 +30,37 @@ You can use any directory to host your build.
 
 The source code is checked out at `fsl-community-bsp/sources`.
 
+== Metadata location
+
+The metadata repository of `meta-freescale-3rdparty`, which includes the Ka-Ro
+falvoured linux recipes is already available as a fork on github under the
+name `meta-fsl-arm-extra`; because of limitation to github's forking and
+naming as well as compatibility with older Ka-Ro releases the repositories
+name is unchanged on github and will be named correctly when downloaded
+locally. Thus the remote:
+
+`meta-fsl-arm-extra`
+
+becoming
+
+`sources/meta-freescale-3rdparty`
+
+locally.
+
 == Contributing
 
-To contribute to this layer you should send the patches for review to the mailing list.
+Ka-Ro has no mailing list to contribute to and patches specific to the Ka-Ro
+flavour of this FSL Community BSP will in general not be accepted by the
+FSL Community BSP.
 
-Mailing list::
-    https://lists.yoctoproject.org/listinfo/meta-freescale
 
-Source code::
-    https://github.com/Freescale/fsl-community-bsp-platform
+Therefore it applies that:
+
+To contribute to this layer you should send the patches for review to the
+maintainer of this BSP, i.e. Ka-Ro. A list of these maintainers can be found
+on the respective site.
+
+=== Creating Patches
 
 When creating patches, please use something like:
 
@@ -48,10 +70,11 @@ $: git format-patch -s --subject-prefix='fsl-community-bsp-platform][PATCH][rock
 When sending patches, please use something like:
 
 [source,console]
-$: git send-email --to meta-freescale@yoctoproject.org <generated patch>
+$: git send-email --to <insert-maintainer-here>@karo-electronics.de <generated patch>
 
 == Using Development and Testing Branches
 
+Contact support: support@karo-electronics.de
 Replace the `repo init` command above with one of the following:
 
 master:: For developers
@@ -65,3 +88,6 @@ Patches are typically merged into master-next and then are merged into master af
 
 [source,console]
 $: repo init -u https://github.com/Freescale/fsl-community-bsp-platform -b master-next
+
+---
+http://www.karo-electronics.de[Ka-Ro electronics GmbH]
